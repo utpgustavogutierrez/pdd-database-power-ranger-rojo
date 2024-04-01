@@ -34,6 +34,26 @@ en SQL. La segunda lista todo el contenido de la tabla _film_. Si no sale ningú
 tipo de error y por el contrario en la pantalla queda un listado significa que
 todo va bien.
 
-Ahora es hora de acceder a la base de datos usando Java. 
+Ahora es hora de acceder a la base de datos usando Java. Con este archivo usted también tiene copia de los últimos drivers de `sqlite` y un archivo de ejemplo llamado `Sample.java`. Lo que debe hacer entonces es:
 
-Vaya a [este enlace](https://github.com/xerial/sqlite-jdbc) y descargue los archivos 
+> javac Sample.java 
+> java -classpath ".:sqlite-jdbc-3.45.2.0.jar:slf4j-api-1.7.36.jar" Sample
+
+Si todo ha salido bien hasta ahora debería tener una salida en la terminal con:
+
+```shell
+name = leo
+id = 1
+name = yui
+id = 2
+```
+
+Ahora probaremos todo junto, la base de datos que descargó y su acceso desde
+_Java_.
+
+```shell`
+$ javac Sakila.java
+$ java -classpath ".:sqlite-jdbc-3.45.2.0.jar:slf4j-api-1.7.36.jar" Sakila
+```
+
+Si puede ver una lista de títulos como resultado de lo anterior significa que todo está listo.
